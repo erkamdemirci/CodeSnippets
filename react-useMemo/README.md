@@ -1,24 +1,24 @@
-## React useCallback Hook Logic
+## React useMemo Hook Logic
 
 ```
-const useCallback = (fn, arr) => {
+const useMemo = (fn, arr) => {
   numOfCalls++
 
   let returnedFunc = {}
 
   if (numOfCalls === 1) {
-    callback = fn
+    returnedValue = fn()
     memoized = [...arr]
-    returnedFunc.fn = callback
+    returnedFunc.fn = returnedValue
   }
 
   if (numOfCalls > 1) {
     memoized.forEach((el) => {
       arr.forEach((elm) => {
         if (el === elm) {
-          returnedFunc.fn = callback
+          returnedFunc.fn = returnedValue
         } else {
-          returnedFunc.fn = fn
+          returnedFunc.fn = fn()
         }
       })
     })
