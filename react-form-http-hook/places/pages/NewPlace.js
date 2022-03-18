@@ -6,8 +6,12 @@ import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH } from '../../shared/util/valida
 
 import { useForm } from '../../shared/hooks/form-hook'
 import { useHttpClient } from '../../shared/hooks/http-hook'
+import { AuthContext } from '../../shared/context/auth-context'
 
 const NewPlace = () => {
+  /* USE AUTH CONTEXT */
+  const auth = useContext(AuthContext)
+
   /* HTTP HOOK INITIALIZE */
   const { isLoading, error, sendRequest, clearError } = useHttpClient()
 

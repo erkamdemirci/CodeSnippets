@@ -1,19 +1,23 @@
-- places
+- _places_
 
-  - pages
-    - NewPlace.js
-    - UpdatePlace.js
+  - _pages_
+    - **NewPlace.js**
+    - **UpdatePlace.js**
 
-- shared
+- _context_
 
-  - components
+  - **auth-context.js**
 
-    - Button.js
-    - Input.js
-    - ErrorModal.js
+- _shared_
 
-  - hooks
-    - form-hook.js
-    - http-hook.js
-  - util
-    - validators.js
+  - _components_
+
+    - **Button.js**
+    - **Input.js**
+    - **ErrorModal.js**
+
+  - _hooks_
+    - **form-hook.js**
+    - **http-hook.js**
+  - _util_
+    - **validators.js**
